@@ -158,11 +158,10 @@
        (find-one #(= (.getApplicationName %) (app-name project)))))
 
 (defn default-env-vars
-  "A map of default environment variables."
+  "A map of default environment variables. Dropping AWS API Key and Secret Key."
   [project]
-  (let [[access-key secret-key] (find-credentials project)]
-    {"AWS_ACCESS_KEY_ID" access-key
-     "AWS_SECRET_KEY" secret-key}))
+  {}
+)
 
 (defn env-var-options [project options]
   (for [[key value] (merge (default-env-vars project)

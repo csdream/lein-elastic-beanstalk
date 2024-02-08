@@ -3,6 +3,7 @@
 Leiningen plugin for Amazon's [Elastic Beanstalk][1].
 
 This is an updated version of @weavejester's repo.
+This is an updated version of @ktgit's repo to drop AWS API Key and Secret Key from environment variables while deploying to AWS Elastic Beanstalk.
 
 ## Prerequisites
 
@@ -18,13 +19,13 @@ your `project.clj` file.
 
 First, add lein-elastic-beanstalk as a plugin:
 ```clojure
-:plugins [[lein-elastic-beanstalk "0.2.8-SNAPSHOT"]]
+:plugins [[org.clojars.csdream/lein-elastic-beanstalk "0.2.9-SNAPSHOT"]]
 ```
 
 or, if you're using a version of Leiningen prior to 1.7.0, add it to
 your `:dev-dependencies`:
 ```clojure
-:dev-dependencies [[lein-elastic-beanstalk "0.2.8-SNAPSHOT"]]
+:dev-dependencies [[org.clojars.csdream/lein-elastic-beanstalk "0.2.9-SNAPSHOT"]]
 ```
 Then add a `lein-beanstalk-credentials` definition to your
 `~/.lein/init.clj` file that contains your AWS credentials:
@@ -326,6 +327,9 @@ application. e.g. for Compojure add
 
 This plugin was originally written by [weavejester](https://github.com/weavejester).
 
+This plugin was originally written by [ktgit](https://github.com/ktgit/)
+
+
 We've also incorporated some pull requests that we needed from contributors to that project:
 
 * [Allow users to supply a WAR file while deploying](https://github.com/weavejester/lein-beanstalk/pull/27) by unknown
@@ -340,4 +344,4 @@ We also welcome your contributions and will do our best to keep this repo update
 [3]: http://aws.amazon.com/s3
 [4]: http://docs.aws.amazon.com/elasticbeanstalk/latest/APIReference/API_ListAvailableSolutionStacks.html
 [5]: http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html
-[6]: http://aws.typepad.com/aws/2013/12/background-task-handling-for-aws-elastic-beanstalk.html
+[6]: http://aws.typepad.com/aws/2013/12/background-task-handling-for-aws-elastic-beanstalk.htmlth
